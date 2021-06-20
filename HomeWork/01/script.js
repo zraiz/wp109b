@@ -14,3 +14,35 @@ $(document).ready(function(){
             $('.scroll-up-btn').removeClass("show");
         }
     });
+
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
+        $('html').css("scrollBehavior", "auto");
+    });
+
+    $('.navbar .menu li a').click(function(){
+        $('html').css("scrollBehavior", "smooth");
+    });
+
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+
+    // typing text animation script
+    var typed = new Typed(".typing", {
+        strings: ["A NoBody", "A Student", "My Mother Son", "My Sister Brother"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    var typed = new Typed(".typing-2", {
+        strings: ["A NoBody", "A Student", "My Mother Son", "My Sister Brother"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+});
